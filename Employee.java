@@ -1,12 +1,18 @@
 import java.time.Year;
 
-public class Employee {
+public abstract class Employee {
 
     private String name;
     private int birthYear;
     private int age;
     private double monthlySalary;
     private int rate;
+
+    //Constants for Bonus 
+    public static final double GAIN_FACTOR_CLIENT = 500;
+    public static final double GAIN_FACTOR_TRAVEL = 100;
+    public static final double GAIN_FACTOR_ERROR = 10;
+    public static final double GAIN_FACTOR_PROJECTS = 200;
 
     public Employee(String name, int birthYear, double monthlySalary, int rate) {
         this.name = name;
@@ -48,4 +54,13 @@ public class Employee {
     public void setRate(int rate) {
         this.rate = rate;
     }
+
+    //Abstract class defination
+    protected abstract double calculateBonus();
+
+    public double annualIncome() {
+        double baseYearlyIncome = 12 * monthlySalary * rate;
+        return baseYearlyIncome + calculateBonus();
+    }
 }
+

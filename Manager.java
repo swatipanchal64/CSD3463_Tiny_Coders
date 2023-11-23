@@ -24,4 +24,10 @@ public class Manager extends Employee {
     public void setNbClients(int nbClients) {
         this.nbClients = nbClients;
     }
+
+    protected double calculateBonus() {
+        double clientBonus = nbClients * GAIN_FACTOR_CLIENT;
+        double travelBonus = nbTravelDays * GAIN_FACTOR_TRAVEL;
+        return clientBonus + travelBonus;
+    }
 }

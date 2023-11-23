@@ -13,4 +13,9 @@ public class Tester extends Employee{
         public void nbBugs(int nbBugs) {
             this.nbBugs = nbBugs;
         }
+
+        protected double calculateBonus() {
+            return nbBugs * GAIN_FACTOR_ERROR;
+        }
+    
 }

@@ -12,5 +12,9 @@ public class Programmer extends Employee {
     
         public void nbProjects(int nbProjects) {
             this.nbProjects = nbProjects;
-        }   
+        }  
+        
+        protected double calculateBonus() {
+            return nbProjects * GAIN_FACTOR_PROJECTS;
+        }
 }
