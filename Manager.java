@@ -3,10 +3,20 @@ public class Manager extends Employee {
     private float nbTravelDays;
     private int nbClients;
 
-    public Manager(String name, int birthYear, double monthlySalary, int rate, float nbTravelDays, int nbClients) {
-        super(name, birthYear, monthlySalary, rate);
+    private Car car;
+
+    public Manager( String name, int birthYear, int nbClients, float nbTravelDays) {
+        super(name, birthYear);
         this.nbTravelDays = nbTravelDays;
         this.nbClients = nbClients;
+        printConstructorMessage();
+    }
+
+    public Manager( String name, int birthYear, int nbClients, float nbTravelDays, int rate) {
+        super(name, birthYear, rate);
+        this.nbTravelDays = nbTravelDays;
+        this.nbClients = nbClients;
+        printConstructorMessage();
     }
 
     public float getNbTravelDays() {
@@ -29,5 +39,9 @@ public class Manager extends Employee {
         double clientBonus = nbClients * GAIN_FACTOR_CLIENT;
         double travelBonus = nbTravelDays * GAIN_FACTOR_TRAVEL;
         return clientBonus + travelBonus;
+    }
+
+    public void printConstructorMessage() {
+        System.out.println("We have a new employee: "+ this.getName()+", a manager.");
     }
 }

@@ -1,27 +1,28 @@
 public class Car extends Vehicle{
     
-    private String gear, type;
+    private Gear gear;
+    private CarType type;
 
-    public Car(String make, String plate, String color, String category,String gear, String type)
+    public Car(String make, String plate, String color, VehicleType category, Gear gear, CarType type)
     {
         super(make, plate, color, category);
         this.gear = gear;
         this.type = type;
     }
 
-    public String getGear() {
+    public Gear getGear() {
         return gear;
     }
 
-    public void setGear(String gear) {
+    public void setGear(Gear gear) {
         this.gear = gear;
     }
 
-    public String getType() {
+    public CarType getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(CarType type) {
         this.type = type;
     }
 }

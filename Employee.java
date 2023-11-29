@@ -14,14 +14,19 @@ public abstract class Employee {
     public static final double GAIN_FACTOR_ERROR = 10;
     public static final double GAIN_FACTOR_PROJECTS = 200;
 
-    public Employee(String name, int birthYear, double monthlySalary, int rate) {
+    public Employee(String name, int birthYear) {
         this.name = name;
         this.birthYear = birthYear;
         this.age =  Year.now().getValue() - birthYear;
-        this.monthlySalary = monthlySalary;
-        this.rate = rate;
+        this.rate = 100;
     }
 
+    public Employee(String name, int birthYear,  int rate) {
+        this.name = name;
+        this.birthYear = birthYear;
+        this.age =  Year.now().getValue() - birthYear;
+        this.rate = rate;
+    }
 
     public String getName() {
         return name;

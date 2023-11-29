@@ -4,10 +4,10 @@ public class Vehicle {
     private String make;
     private String plate;
     private String color;
-    private String category;
+    private VehicleType category;
 
     // Constructor
-    public Vehicle(String make, String plate, String color, String category) {
+    public Vehicle(String make, String plate, String color, VehicleType category) {
         this.make = make;
         this.plate = plate;
         this.color = color;
@@ -27,7 +27,7 @@ public class Vehicle {
         return color;
     }
 
-    public String getCategory() {
+    public VehicleType getCategory() {
         return category;
     }
 
@@ -44,7 +44,7 @@ public class Vehicle {
         this.color = color;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(VehicleType category) {
         this.category = category;
     }
 }

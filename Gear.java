@@ -1,0 +1,3 @@
+enum Gear {
+    Manual, Automatic
+}
