@@ -6,6 +6,9 @@ public class Vehicle {
     private String color;
     private VehicleType category;
 
+    public Vehicle() {
+
+    }
     // Constructor
     public Vehicle(String make, String plate, String color, VehicleType category) {
         this.make = make;

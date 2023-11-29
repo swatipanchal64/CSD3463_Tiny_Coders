@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class EmployeeMain {
 
-    public static void main(String[] args) {
+    public static void main123(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         // Input for Manager
@@ -20,7 +20,7 @@ public class EmployeeMain {
         System.out.print("Number of Clients: ");
         int managerClients = scanner.nextInt();
 
-        Manager manager = new Manager(managerName, managerBirthYear, managerMonthlySalary, managerRate, managerTravelDays, managerClients);
+//        Manager manager = new Manager(managerName, managerBirthYear, managerMonthlySalary, managerRate, managerTravelDays, managerClients);
 
         // Input for Tester
         System.out.println("\nEnter Tester's Information:");
@@ -35,7 +35,7 @@ public class EmployeeMain {
         System.out.print("Number of Bugs: ");
         int testerBugs = scanner.nextInt();
 
-        Tester tester = new Tester(testerName, testerBirthYear, testerMonthlySalary, testerRate, testerBugs);
+//        Tester tester = new Tester(testerName, testerBirthYear, testerMonthlySalary, testerRate, testerBugs);
 
         // Input for Programmer
         System.out.println("\nEnter Programmer's Information:");
@@ -50,14 +50,14 @@ public class EmployeeMain {
         System.out.print("Number of Projects: ");
         int programmerProjects = scanner.nextInt();
 
-        Programmer programmer = new Programmer(programmerName, programmerBirthYear, programmerMonthlySalary, programmerRate, programmerProjects);
+//        Programmer programmer = new Programmer(programmerName, programmerBirthYear, programmerMonthlySalary, programmerRate, programmerProjects);
 
         // Display Results
         System.out.println("\nResults:");
 
-        displayEmployeeInfo(manager);
-        displayEmployeeInfo(tester);
-        displayEmployeeInfo(programmer);
+//        displayEmployeeInfo(manager);
+//        displayEmployeeInfo(tester);
+//        displayEmployeeInfo(programmer);
 
         scanner.close();
     }

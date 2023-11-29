@@ -3,15 +3,13 @@ public class Tester extends Employee{
     private int nbBugs;
 
     public Tester(String name, int birthYear, int nbBugs, int rate) {
-        super(name, birthYear, rate);
+        super(name, birthYear, rate, EmployeeType.Tester);
         this.nbBugs = nbBugs;
-        printConstructorMessage();
     }
 
     public Tester(String name, int birthYear, int nbBugs) {
-        super(name, birthYear);
+        super(name, birthYear, EmployeeType.Tester);
         this.nbBugs = nbBugs;
-        printConstructorMessage();
     }
 
     public int nbBugs() {
