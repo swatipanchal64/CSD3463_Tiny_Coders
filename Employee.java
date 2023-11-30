@@ -12,6 +12,8 @@ public abstract class Employee extends Vehicle {
 
     private EmployeeType type;
 
+    private Contract contract;
+
     private static final int  DEFAULT_RATE = 100;
 
     //Constants for Bonus 
@@ -49,8 +51,6 @@ public abstract class Employee extends Vehicle {
         return name;
     }
 
-
-    //Abstract class defination
     protected abstract double calculateBonus();
 
     public double annualIncome() {
@@ -58,9 +58,21 @@ public abstract class Employee extends Vehicle {
         return baseYearlyIncome + calculateBonus();
     }
 
+    public void signContract(Contract contract) {
+        double accumulatedSalary = contract.accumulatedSalary();
+        this.contract = contract;
+        this.contract.convertFrom(accumulatedSalary);
+    }
+
+    public String contractInfo() {
+        return  this.name + " is a "+this.type+". " + contract + "\n";
+    }
+
     @Override
     public String toString() {
-        return "Name: " + this.name + ", a "+this.type+" \nAge: " + this.age;
+        return "Name: " + this.name + ", a "+this.type+" \nAge: " + this.age +
+                "\n" + vehicle + "\n" +
+                this.getName() + " has an occupation rate: "+ this.rate + "%";
     }
 }
 

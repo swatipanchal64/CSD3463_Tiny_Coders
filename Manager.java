@@ -44,13 +44,8 @@ public class Manager extends Employee {
 
     @Override
     public String toString() {
-
-        return  super.toString();
-
-//        return "Name: " + this.getName() + ", a Manager \nAge: " + this.getAge() +
-//                "\nEmployee has a car \n"  + "\n" +
-//                this.getName() + " has an occupation rate: "+ this.getRate() + "% He/She travelled " + this.getNbTravelDays() + " days and\n" +
-//                "has bought " + this.getNbClients() + " new clients.\n" +
-//                "His/Her estimated annual income is " + this.annualIncome();
+        return super.toString() + " He/She travelled " + this.getNbTravelDays() + " days and\n" +
+                "has bought " + this.getNbClients() + " new clients.\n" +
+                "His/Her estimated annual income is " + this.annualIncome();
     }
 }

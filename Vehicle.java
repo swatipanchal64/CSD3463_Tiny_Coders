@@ -50,4 +50,12 @@ public class Vehicle {
     public void setCategory(VehicleType category) {
         this.category = category;
     }
+
+    @Override
+    public String toString() {
+        return "\t - make: " + this.make +
+                "\n\t - plate: " + this.plate +
+                "\n\t - color: " + this.color +
+                "\n\t - category: " + this.category;
+    }
 }

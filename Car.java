@@ -28,10 +28,7 @@ public class Car extends Vehicle{
 
     @Override
     public String toString() {
-        return "\t - make: " + this.getMake() +
-               "\n\t - plate: " + this.getPlate() +
-               "\n\t - color: " + this.getColor() +
-               "\n\t - category: " + this.getCategory() +
+        return "Employee has a car\n" +super.toString() +
                "\n\t - gear type: " + this.getGear() +
                "\n\t - type: " + this.getType();
     }

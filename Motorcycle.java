@@ -6,11 +6,8 @@ public class Motorcycle extends Vehicle{
         this.sideCar = sideCar;
     }
 
-    public boolean sideCar() {
-        return sideCar;
-    }
-
-    public void sideCar(boolean sideCar) {
-        this.sideCar = sideCar;
+    @Override
+    public String toString() {
+        return "Employee has a motorcycle\n" +super.toString() + "\n\t - " +(!this.sideCar ? "without" : "with" ) + " sidebar";
     }
 }
