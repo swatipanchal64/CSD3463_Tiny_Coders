@@ -14,16 +14,8 @@ public class Car extends Vehicle{
         return gear;
     }
 
-    public void setGear(Gear gear) {
-        this.gear = gear;
-    }
-
     public CarType getType() {
         return type;
-    }
-
-    public void setType(CarType type) {
-        this.type = type;
     }
 
     @Override
